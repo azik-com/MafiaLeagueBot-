@@ -556,7 +556,7 @@ async def announce_winner(cid, ctx, game):
     roles_text = game.final_roles_text()
     await ctx.bot.send_message(
         chat_id=cid,
-        text=f"{win_msgs.get(game.winner, '🏁 O'yin tugadi!')}\n\n"
+        text=f"{win_msgs.get(game.winner, '🏁 Oyin tugadi!')}\n\n"
              f"⏱ {m} daqiqa {s} soniya | 🔄 {game.round} tur\n\n"
              f"<b>Barcha rollar:</b>\n{roles_text}",
         parse_mode=ParseMode.HTML
