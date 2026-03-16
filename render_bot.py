@@ -696,6 +696,9 @@ def main():
     t = threading.Thread(target=run_health_server, daemon=True)
     t.start()
 
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", cmd_start))
     app.add_handler(CommandHandler("help", cmd_help))
